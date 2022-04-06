@@ -6,6 +6,8 @@ import {
   Scripts,
   ScrollRestoration,
 } from "remix";
+import { SessionContext, userContext } from "./context/sessionContext";
+import { useState } from "react";
 
 export function meta() {
   return {
@@ -16,6 +18,8 @@ export function meta() {
 }
 
 export default function App() {
+  const [user, setUser] = useState(userContext);
+
   return (
     <html lang="en">
       <head>
@@ -23,7 +27,9 @@ export default function App() {
         <Links />
       </head>
       <body style={{ margin: 0 }}>
-        <Outlet />
+        <SessionContext.Provider value={[user, setUser]}>
+          <Outlet />
+        </SessionContext.Provider>
         <ScrollRestoration />
         <Scripts />
         <LiveReload />
