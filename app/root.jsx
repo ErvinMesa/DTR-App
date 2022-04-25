@@ -26,7 +26,7 @@ export default function App() {
         <Meta />
         <Links />
       </head>
-      <body style={{ margin: 0 }}>
+      <body style={{ margin: 0, backgroundColor: "#F7F3E3" }}>
         <SessionContext.Provider value={[user, setUser]}>
           <Outlet />
         </SessionContext.Provider>

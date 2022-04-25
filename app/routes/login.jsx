@@ -19,7 +19,7 @@ export const action = async ({ request }) => {
   if (!user) {
     return json({ formError: `Invalid Credentials` });
   }
-  return createUserSession(user.id, "/");
+  return createUserSession(user.id, "/dashboard");
 };
 
 export default function LoginUser() {
@@ -27,9 +27,10 @@ export default function LoginUser() {
   return (
     <Center style={{ height: "100vh" }}>
       <Paper
-        style={{ height: "30%", width: "30%" }}
-        shadow="sm"
+        style={{ height: "30%", width: "20%" }}
+        shadow="10px 10px 20px -15px #6F1A07"
         p="xl"
+        radius="lg"
         withBorder
       >
         <Stack spacing="md">

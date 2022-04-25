@@ -23,9 +23,10 @@ export default function RegisterUser() {
   return (
     <Center style={{ height: "100vh" }}>
       <Paper
-        style={{ height: "30%", width: "30%" }}
-        shadow="sm"
+        style={{ height: "30%", width: "20%" }}
+        shadow="10px 10px 20px -15px #6F1A07"
         p="xl"
+        radius="lg"
         withBorder
       >
         <Stack spacing="md">

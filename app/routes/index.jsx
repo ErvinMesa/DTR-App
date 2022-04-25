@@ -36,8 +36,9 @@ export default function Index() {
     <Center style={{ height: "100vh" }}>
       <Paper
         style={{ height: "50%", width: "30%" }}
-        shadow="sm"
+        shadow="10px 10px 20px -15px #6F1A07"
         p="xl"
+        radius="lg"
         withBorder
       >
         <Center style={{ height: "100%" }}>
